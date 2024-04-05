@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logs</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Logs</h1>
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>tempo</th>
+                        <th>ip_ads</th>
+                        <th>acao</th>
+                        <th>parametros</th>
+                    </tr>
+                </thead>
+                <tbody hx-get="/info" hx-trigger="load" hx-swap="innerHTML"></tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

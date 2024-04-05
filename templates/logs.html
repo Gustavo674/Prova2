@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs</title>
+</head>
+<body>
+    <div>
+        <h1>Logs</h1>
+        <div class="logs">
+            {% for log in logs %}
+            <tr>
+                <td>{{ log.doc_id }}</td>
+                <td>{{ log.data.tempo }}</td>
+                <td>{{ log.data.ip_ads }}</td>
+                <td>{{ log.data.acao }}</td>
+                <td>
+                    <ul>
+                        {% for key, value in log.data.parametros.items() %}
+                        <li>{{ key }}: {{ value }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
